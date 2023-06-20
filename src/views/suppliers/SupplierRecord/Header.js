@@ -55,14 +55,14 @@ function Header({ className, ...rest }) {
             variant="body1"
             color="textPrimary"
           >
-            Create Invoice
+            Create Supplier
           </Typography>
         </Breadcrumbs>
         <Typography
           variant="h3"
           color="textPrimary"
         >
-          Please create invoice!
+          Please create supplier!
         </Typography>
       </Grid>
     </Grid>

@@ -24,7 +24,6 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
   return (
     <Formik
       initialValues={{
-        number: '',
         name: '',
         mobile: '',
         email: '',
@@ -36,7 +35,6 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
         address: '',
       }}
       validationSchema={Yup.object().shape({
-        number: Yup.number().required('Supplier ID is required'),
         name: Yup.string().max(255).required('Supplier Name is required'),
         mobile: Yup.string().max(255).required('Supplier Mobile is required'),
         email: Yup.string().max(255).required('Supplier Email is required'),
@@ -54,10 +52,11 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
       }) => {
         try {
           // Make API request
-          const { number, name, mobile, email, phone, country, state, city, postcode, address } = values;
+          const { name, mobile, email, phone, country, state, city, postcode, address } = values;
           var data = '';
 
-          await axios.post(API_BASE_URL + 'suppliers/create', { number, name, mobile, email, phone, country, state, city, postcode, address })
+          console.log(name)
+          await axios.post(API_BASE_URL + 'suppliers/create', { name, mobile, email, phone, country, state, city, postcode, address })
             .then((response) => {
               data = response.data;
             })
@@ -97,23 +96,10 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
           {...rest}
         >
           <TextField
-            error={Boolean(touched.number && errors.number)}
-            fullWidth
-            helperText={touched.number && errors.number}
-            label="Customer ID"
-            margin="normal"
-            name="number"
-            onBlur={handleBlur}
-            onChange={handleChange}
-            type="number"
-            value={values.number}
-            variant="outlined"
-          />
-          <TextField
             error={Boolean(touched.name && errors.name)}
             fullWidth
             helperText={touched.name && errors.name}
-            label="Customer Name"
+            label="Supplier Name"
             margin="normal"
             name="name"
             onBlur={handleBlur}

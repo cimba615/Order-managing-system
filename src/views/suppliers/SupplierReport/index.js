@@ -57,7 +57,7 @@ function InvoiceListView() {
   return (
     <Page
       className={classes.root}
-      title="Invoice List"
+      title="Supplier List"
     >
       <Container maxWidth={false}>
         <Header />

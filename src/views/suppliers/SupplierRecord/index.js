@@ -47,7 +47,7 @@ function RegisterView() {
               color="textPrimary"
               align='center'
             >
-              Invoice creating page
+              New Supplier
             </Typography>
             <Box mt={3}>
               <RegisterForm onSubmitSuccess={handleSubmitSuccess} />
@@ -61,7 +61,7 @@ function RegisterView() {
               variant="body2"
               color="textSecondary"
             >
-              Go invoice list
+              Go supplier list
             </Link>
           </CardContent>
         </Card>

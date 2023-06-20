@@ -79,7 +79,7 @@ function Header({ className, ...rest }) {
           variant="contained"
           className={classes.action}
           component={RouterLink}
-          to='/app/sales/invoiceRecord'
+          to='/app/suppliers/supplierRecord'
         >
           <SvgIcon
             fontSize="small"
@@ -87,7 +87,7 @@ function Header({ className, ...rest }) {
           >
             <PlusCircleIcon />
           </SvgIcon>
-          New Invoice
+          New Supplier
         </Button>
       </Grid>
     </Grid>
