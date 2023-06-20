@@ -29,13 +29,13 @@ function RegisterView() {
   const history = useHistory();
 
   const handleSubmitSuccess = () => {
-    history.push('/app/sales/invoiceReport');
+    history.push('/app/suppliers/supplierReport');
   };
 
   return (
     <Page
       className={classes.root}
-      title="Create invoice"
+      title="Create supplier"
     > 
        <Header />
       <Container maxWidth="sm">

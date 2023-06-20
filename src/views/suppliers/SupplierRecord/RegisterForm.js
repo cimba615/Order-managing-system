@@ -57,7 +57,7 @@ function RegisterForm({ className, onSubmitSuccess, ...rest }) {
           const { number, name, mobile, email, phone, country, state, city, postcode, address } = values;
           var data = '';
 
-          await axios.post(API_BASE_URL + 'sales/create', { number, name, mobile, email, phone, country, state, city, postcode, address })
+          await axios.post(API_BASE_URL + 'suppliers/create', { number, name, mobile, email, phone, country, state, city, postcode, address })
             .then((response) => {
               data = response.data;
             })
